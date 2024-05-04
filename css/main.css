@@ -1,0 +1,175 @@
+/* Header Styling */
+header.navbar {
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 10px 0; 
+}
+
+/* Logo Styling */
+.navbar-brand img {
+    max-width: 150px; 
+    height: auto;
+}
+
+/* Toggle Button Styling */
+.navbar-toggler {
+    border: none;
+}
+
+/* Menu Links Styling */
+.navbar-nav .menu-item {
+    margin-right: 10px; 
+}
+
+.navbar-nav .menu-item a {
+    color: #333; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+}
+
+/* Menu Links Hover Styling */
+.navbar-nav .sub-menu {
+    display: none; 
+    position: absolute; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 9999; 
+}
+
+.navbar-nav .sub-menu li {
+    position: relative; 
+}
+
+.navbar-nav .sub-menu li:hover > .sub-menu {
+    display: block; 
+}
+
+.navbar-nav .sub-menu ul {
+    left: 100%; 
+    top: 0;
+ }
+
+
+
+/*pagination*/
+.navigation.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links .page-numbers {
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+
+.nav-links .page-numbers:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.nav-links .current {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+
+/*Hero Section*/
+
+.home-title,.home-excerpt{
+    text-align: center;
+}
+.hero {
+    height: 500px; 
+
+    position: relative;
+    overflow: hidden;
+    background-size: cover; 
+    background-position: center; 
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+
+}
+
+
+@media (max-width: 768px) {
+    .hero-background,.hero {
+        height: 300px; 
+    }
+}
+
+
+/*Blog */
+
+.img-thumbnail{
+    max-height: 250px;
+}
+
+/* .card{
+    max-width: 400px;
+ 
+} */
+
+/*Footer*/
+
+footer.footer {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+
+/*Side bar*/
+.widget {
+    margin-bottom: 20px;
+}
+
+.widget h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget ul li {
+    margin-bottom: 5px;
+}
+
+.widget ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.widget ul li a:hover {
+    color: #007bff;
+}
