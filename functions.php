@@ -3,7 +3,7 @@
     //add css files
 function tech_world_add_style(){
     //add bootstrab style 
-    wp_enqueue_style( 'bootstarb-style', get_template_directory_uri() . '/css/bootstrab_css/bootstrap.min.css' );
+    wp_enqueue_style( 'bootstarb-style', get_template_directory_uri() . '/css/bootstrab_css/bootstrap.css' );
     //add custom style
     wp_enqueue_style( 'custom-css', get_template_directory_uri() . '/css/main.css' );
 
@@ -38,7 +38,7 @@ function tech_world_add_style(){
 // Theme Options
 
 add_theme_support('custom-logo', array(
-    'height' => get_theme_mod('tech_world_logo_height', 80), 
+    // 'height' => get_theme_mod('tech_world_logo_height', 120), 
 ));
 
 add_theme_support('menus');
@@ -111,3 +111,32 @@ function custom_posts_per_page( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'custom_posts_per_page' );
+
+
+/*Change Clasess */
+
+// function custom_menu_classes($classes, $item, $args) {
+//     $classes[] = 'nav-item-li-class';
+
+//     $classes[] = 'nav-link-a-class';
+
+//     return $classes;
+// }
+// add_filter('nav_menu_css_class', 'custom_menu_classes', 10, 3);
+
+function custom_nav_menu_item_css_class( $classes, $item, $args, $depth ) {
+    if ( $args->theme_location == 'top-menu' ) {
+        $classes =array();
+        $classes[] = 'nav-item'; 
+    }
+    return $classes;
+}
+add_filter( 'nav_menu_css_class', 'custom_nav_menu_item_css_class', 10, 4 );
+
+function custom_nav_menu_link_attributes( $atts, $item, $args, $depth ) {
+    if ( $args->theme_location == 'top-menu' ) {
+        $atts['class'] = 'nav-link'; 
+    }
+    return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'custom_nav_menu_link_attributes', 10, 4 );
