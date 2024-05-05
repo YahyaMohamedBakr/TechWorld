@@ -2,8 +2,7 @@
 
 
  ?>
-
-         <!-- Page header with logo and tagline-->
+ <!-- Page header with logo and tagline-->
          <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
@@ -15,9 +14,7 @@
 
         <div class="container">
             <div class="row">
-                <!-- Blog entries-->
-                <div class="col-lg-6">
-                    <!-- Nested row for non-featured blog posts-->
+
 
             <?php
         get_template_part('includes/section', 'blog');

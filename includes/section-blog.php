@@ -4,6 +4,8 @@ if (have_posts()) :
     while (have_posts()) :
         the_post();
 ?>
+
+    <div class="col-lg-6">
         <div class="card mb-4">
             <?php if (has_post_thumbnail()) : ?>
                 <a href="<?php the_permalink(); ?>"><img class="card-img-top" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" /></a>
@@ -15,6 +17,8 @@ if (have_posts()) :
                 <a class="btn btn-primary" href="<?php the_permalink(); ?>">Read more →</a>
             </div>
         </div>
+    </div>
+
 <?php
     endwhile;
 ?>
