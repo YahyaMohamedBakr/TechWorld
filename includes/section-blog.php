@@ -21,16 +21,9 @@ if (have_posts()) :
 
 <?php
     endwhile;
-?>
-    <nav aria-label="Pagination">
-    <hr class="my-0" />
-    <?php
-    the_posts_pagination(array(
-        'prev_text' => '&laquo; Previous',
-        'next_text' => 'Next &raquo;',
-    ));
+
 else :
     echo '<p>No content found</p>';
 endif;
 ?>
-    </nav>
+  
