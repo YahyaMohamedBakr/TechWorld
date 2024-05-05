@@ -173,3 +173,125 @@ footer.footer {
 .widget ul li a:hover {
     color: #007bff;
 }
+
+
+/*Footer styling*/
+footer {
+    padding: 50px 0;
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+.footer-section h5 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffc107;
+}
+
+.footer-section ul li a::before {
+    content: "\2022";
+    color: #ffc107;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.footer-section ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ffc107;
+    transition: width 0.3s ease;
+}
+
+.footer-section ul li a:hover::after {
+    width: 30%;
+}
+
+.footer-section p.site-slogan {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-section .navbar-brand {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-section .navbar-brand:hover {
+    color: #ffc107;
+}
+
+
+
+
+
+
+
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+    opacity: 1;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #ffc107;
+}
+
+.navbar-nav .nav-item .nav-link:focus, .navbar-nav .nav-item .nav-link:hover {
+    color: #ffc107;
+}
+
+/* .navbar-nav .nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    width: 0;
+    height: 2px;
+    background-color: #ffc107;
+    transition: width 0.3s ease, left 0.3s ease;
+} */
+
+.navbar-nav .nav-item:hover::after {
+    width: 20%;
+    left: 0;
+}

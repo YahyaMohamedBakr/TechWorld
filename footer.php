@@ -2,7 +2,6 @@
 
 wp_footer();
 ?>
-
     <footer class="py-5 bg-dark">
         <div class="container">
             <div class="row">
@@ -13,6 +12,9 @@ wp_footer();
                             <div class="footer-logo">
                                 <?php the_custom_logo(); ?>
                             </div>
+                        <?php else:?>
+                            <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+
                         <?php endif; ?>
                         <p class="site-slogan"><?php bloginfo('description'); ?></p>
                     </div>
