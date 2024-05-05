@@ -49,10 +49,10 @@ $url=  get_the_post_thumbnail_url(get_option('page_on_front'))?>
                     <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                         <div class="d-flex align-items-end justify-content-between">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                <img class="rounded-circle me-3" src="<?= get_avatar_url(get_the_author_meta('user_email'), array('size' => 40)); ?>" alt="..." />
                                 <div class="small">
-                                    <div class="fw-bold">Kelly Rowan</div>
-                                    <div class="text-muted">March 12, 2023 &middot; 6 min read</div>
+                                    <div class="fw-bold"><?php the_author(); ?></div>
+                                    <div class="text-muted"><?php echo get_the_date(); ?></div>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@ $url=  get_the_post_thumbnail_url(get_option('page_on_front'))?>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="<?php the_permalink(); ?>">By Now</a></div>
                     </div>
                 </div>
             </div>
