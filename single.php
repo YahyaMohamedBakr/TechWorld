@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_template_part('includes/section', 'blog_header');?>
 
 <div class="container my-5">
     <div class="row">

@@ -27,6 +27,44 @@ header.navbar {
     padding: 10px 15px; 
 }
 
+.navbar-nav .nav-item .nav-link {
+    position: relative;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-item .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover::before {
+    opacity: 1;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #ffc107;
+}
+
+.navbar-nav .nav-item .nav-link:focus, .navbar-nav .nav-item .nav-link:hover {
+    color: #ffc107;
+}
+
+
+
+.navbar-nav .nav-item:hover::after {
+    width: 20%;
+    left: 0;
+}
+
 /* Menu Links Hover Styling */
 .navbar-nav .sub-menu {
     display: none; 
@@ -138,12 +176,9 @@ header.navbar {
  
 } */
 
-/*Footer*/
 
-footer.footer {
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-}
+
+
 
 
 /*Side bar*/
@@ -176,6 +211,10 @@ footer.footer {
 
 
 /*Footer styling*/
+footer.footer {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
 footer {
     padding: 50px 0;
     background-color: #343a40;
@@ -249,49 +288,3 @@ footer {
 
 
 
-.navbar-nav .nav-item .nav-link {
-    position: relative;
-    color: #ffffff;
-}
-
-.navbar-nav .nav-item .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    background-color: #ffc107;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.navbar-nav .nav-item .nav-link:hover::before {
-    opacity: 1;
-}
-
-.navbar-nav .nav-item.active .nav-link {
-    color: #ffc107;
-}
-
-.navbar-nav .nav-item .nav-link:focus, .navbar-nav .nav-item .nav-link:hover {
-    color: #ffc107;
-}
-
-/* .navbar-nav .nav-item::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 2%;
-    width: 0;
-    height: 2px;
-    background-color: #ffc107;
-    transition: width 0.3s ease, left 0.3s ease;
-} */
-
-.navbar-nav .nav-item:hover::after {
-    width: 20%;
-    left: 0;
-}
